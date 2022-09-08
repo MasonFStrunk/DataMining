@@ -1,0 +1,112 @@
+The Data being mined is that of an iris flower based on these four numeric attributes:
+1. sepal length in cm
+2. sepal width in cm
+3. petal length in cm
+4. petal width in cm
+Which are then classified into three species
+- Iris Setosa
+- Iris Versicolour
+- Iris Virginica
+
+There are 150 data points and one third of them are of each class.
+
+The base rate of ZeroR has an effective identification rate of 33.333 percent.
+
+The most effective algorithm tested is 97.333 percent being the Multilayer perceptron.
+
+Another relatively effective algorithm was the JRip at 95.333 percent effective.
+
+JRIP rules:
+===========
+(petallength >= 3.3) and (petalwidth <= 1.6) and (petallength <= 4.9) => class=Iris-versicolor (46.0/0.0)
+(petallength <= 1.9) => class=Iris-setosa (50.0/0.0)
+ => class=Iris-virginica (54.0/4.0)
+
+JRIP's rules were dependent on the on the petal length and width alone.
+Rule 1-- If the petals are between or equal to 3.3cm and 4.9cm, and the petal width is less or equal to 1.6cm then it is an Iris Versicolor.
+Rule 2-- If the petal length is less than or equal to 1.9cm then it is an Iris Setosa.
+Rule 3-- Otherwise hen it is an Iris Virginica.
+
+
+
+
+
+
+
+
+
+
+
+rules.ZeroR results:
+=== Summary ===
+
+Correctly Classified Instances          50               33.3333 %
+Incorrectly Classified Instances       100               66.6667 %
+Kappa statistic                          0     
+Mean absolute error                      0.4444
+Root mean squared error                  0.4714
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              150     
+
+bayes.BayesNet results:
+=== Summary ===
+
+Correctly Classified Instances         139               92.6667 %
+Incorrectly Classified Instances        11                7.3333 %
+Kappa statistic                          0.89  
+Mean absolute error                      0.0454
+Root mean squared error                  0.1828
+Relative absolute error                 10.2111 %
+Root relative squared error             38.7793 %
+Total Number of Instances              150     
+
+functions.MultilayerPerceptron results:
+=== Summary ===
+
+Correctly Classified Instances         146               97.3333 %
+Incorrectly Classified Instances         4                2.6667 %
+Kappa statistic                          0.96  
+Mean absolute error                      0.0327
+Root mean squared error                  0.1291
+Relative absolute error                  7.3555 %
+Root relative squared error             27.3796 %
+Total Number of Instances              150     
+
+meta.Bagging results
+=== Summary ===
+
+Correctly Classified Instances         141               94      %
+Incorrectly Classified Instances         9                6      %
+Kappa statistic                          0.91  
+Mean absolute error                      0.0529
+Root mean squared error                  0.1692
+Relative absolute error                 11.9007 %
+Root relative squared error             35.9002 %
+Total Number of Instances              150     
+
+rules.JRip results:
+=== Summary ===
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0454
+Root mean squared error                  0.1727
+Relative absolute error                 10.2173 %
+Root relative squared error             36.6447 %
+Total Number of Instances              150     
+
+trees.HoeffdingTree results:
+=== Summary ===
+
+Correctly Classified Instances         143               95.3333 %
+Incorrectly Classified Instances         7                4.6667 %
+Kappa statistic                          0.93  
+Mean absolute error                      0.0373
+Root mean squared error                  0.1543
+Relative absolute error                  8.3884 %
+Root relative squared error             32.735  %
+Total Number of Instances              150     
+
+
